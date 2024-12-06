@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Indie+Flower&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 150px;
+}
+
+.nav-img img {
+    height: 150px;
+    width: 100%;
+    z-index: -1;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.video-img {
+    position: relative;
+    top: -10px;
+    width: 100%;
+    z-index: 1; 
+    margin-bottom: 20px;
+}
+
+.video-img::after {
+    content: ''; /* Adds an empty pseudo-element */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust the height of the gradient */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 1;
+}
+
+.header-content {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%; /* Ensure the header content spans the full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content a h1{
+    position: absolute;
+    top: 15px;
+    left: 0 ;
+    width: 100%; /* Ensures the h1 spans the entire width of the container */
+    text-align: center; /* Centers the text inside the h1 */
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: #000;
+}
+
+.nav-links {
+    position: absolute;
+    top: 10px; /* Adjust top position for spacing */
+    right: 20px; /* Adjust right position for spacing */
+    display: flex;
+    gap: 20px; /* Adds proper spacing between icons */
+    align-items: center;
+    z-index: 2;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    font-size: 20px; /* Adjust icon size */
+    color: black; /* Default icon color */
+    top: 9px;
+    padding: 7px 25px;
+    font-size: 22px;
+}
+
+.nav-links li a {
+    text-decoration: none; /* Remove the default underline */
+    color: black;
+    position: relative; /* Positioning for the ::after pseudo-element */
+}
+
+.nav-links li a:hover{
+    color: rgb(160, 161, 162);
+    transition: color 0.5s ease;
+}
+
+.shop {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 2;
+}
+
+.shop ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.shop li {
+    display: inline-block;
+    font-size: 18px;
+    padding: 7px 25px;
+}
+
+.shop li a {
+    text-decoration: none; /* Remove the default underline */
+    color: black;
+    position: relative; /* Positioning for the ::after pseudo-element */
+}
+
+.shop li a::after {
+    content: ''; /* Create the underline */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Position the line just below the text */
+    width: 0; /* Initially hidden */
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Color of the underline */
+    transition: width 0.5s ease; /* Smooth expansion */
+}
+
+.shop li a:hover::after {
+    width: 100%; /* Expand underline fully on hover */
+}
+
+.details {
+    position: absolute;
+    top: 95px; /* Center vertically within the parent */
+    left: 30%; /* Center horizontally within the parent */
+    display: flex;
+    align-items: center; /* Center-align the content horizontally */
+    text-align: center; /* Center-align the text within the element */
+    z-index: 2;
+    color: rgba(164, 24, 24, 0.945);
+    font-size: 100%;
+}
+
+.details li{
+    list-style: none;
+}
+
+.details h3{
+    padding-right: 35px;
+}
+
+#form-section {
+    background-color: #fff;
+    color: rgb(59, 0, 115);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form heading */
+#form-section h2 {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Styling the form elements */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center the form elements */
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Reduces the width of form elements */
+    max-width: 400px; /* Optionally set a max width */
+}
+
+label {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%; /* Ensures it takes up full width of the parent */
+    max-width: 100%; /* Prevents it from going beyond the max width */
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button Styling */
+#submit-btn {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    padding: 10px 18px; /* Smaller padding */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
+#contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contact-info h2 {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: rgb(59, 0, 115);
+}
+
+#contact-info p {
+    font-size: 1.1rem;
+    font-family: 'Kanit', sans-serif;
+    color: #333;
+    margin: 10px 0;
+}
+
+#contact-info h3{
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+}
+
+.contact-details {
+    font-family: 'Kanit', sans-serif;
+    color: #555;
+    font-size: 1rem;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: #3b0073;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.business-hours {
+    font-family: 'Kanit', sans-serif;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.business-hours p {
+    margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    padding: 30px ;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer .social{
+    position: relative; /* Needed for the ::after pseudo-element */
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+.footer .social a{
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .social ul{
+    width: 100%;
+}
+
+.footer .social ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .social a i {
+    font-size: 23px;
+    margin: 0% 1%;
+}
+
+.footer .social a i:hover{
+    color: #f8f8f8;
+    transition: color 0.5s ease; 
+}
+
+.footer .social a {
+    position: relative; /* Needed for the ::after pseudo-element */
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.footer .row {
+    margin: 1% 0;
+    padding: 0.6% 0;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+.footer .row a {
+    position: relative; /* Needed for the ::after pseudo-element */
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.footer .row a::after {
+    content: ''; /* Create the underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline just below the text */
+    width: 0; /* Start with no width */
+    height: 1px; /* Thickness of the underline */
+    background-color: gray; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth expansion effect */
+}
+
+.footer .row a:hover::after {
+    width: 100%; /* Expand underline to full width */
+}

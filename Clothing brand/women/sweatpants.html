@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic metadata for the webpage -->
+        <meta charset="UTF-8"> <!-- Specifies character encoding for proper text rendering -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
+        <meta name="description" content="Elevate your style with our exclusive clothing brand..."> <!-- Describes the page for search engines -->
+        <meta name="keywords" content="ChickFix, clothing brand, trendy fashion..."> <!-- Keywords to improve SEO -->
+        <meta name="author" content="Neel Hingrajiya, Dev Prajapati"> <!-- Authors of the webpage -->
+        <title>SweatPants</title> <!-- The title displayed in the browser tab -->
+
+        <!-- Linking external CSS files -->
+        <link rel="stylesheet" href="../css/varients.css"> <!-- Custom CSS for the webpage -->
+        <link rel="icon" href="../img/favicon.jpg"> <!-- Sets the favicon for the browser tab -->
+
+        <!-- FontAwesome CDN for icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <nav>
+                <!-- Navigation links for shop categories -->
+                <div class="shop">
+                    <ul>
+                        <li><a href="#">New</a></li> <!-- Link to new arrivals -->
+                        <li><a href="../mens/men.html">Men</a></li> <!-- Link to men's category -->
+                        <li><a href="../women/women.html">Women</a></li> <!-- Link to women's category -->
+                    </ul>
+                </div>            
+
+                <!-- Banner image at the top of the page -->
+                <div class="nav-img">
+                    <img src="../img/banners/header_banner.png"  alt="header banner">
+                </div>
+
+                <!-- Logo and branding -->
+                <div class="header-content">
+                    <a href="../index/index.html"><h1>ChicFix</h1></a> <!-- Link back to the homepage -->
+                </div>
+
+                <!-- Navigation icons (Search, Profile, Cart) -->
+                <div class="nav-links">
+                    <ul>
+                        <li id="li1"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li> <!-- Search -->
+                        <li id="li2"><a href="#"><i class="fa-regular fa-user"></i></a></li> <!-- User profile -->
+                        <li id="li3"><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li> <!-- Shopping bag -->
+                    </ul>
+                </div>
+
+                <!-- Promotional details (Black Friday sale announcement) -->
+                <div class="details">
+                    <h3>BLACK FRIDAY SALE</h3>
+                    <ul>
+                        <li>50% off on Men | 30% off on Kids | Extra 20% off on $100+</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <div class="product-page">
+                <!-- Product Image Slideshow -->
+                <div class="product-images">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img src="../img/Women/Sweatpants/1.jpg" alt="Beige"> <!-- Beige color option -->
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="../img/Women/Sweatpants/2.jpg" alt="Black"> <!-- Black color option -->
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="../img/Women/Sweatpants/3.jpg" alt="White"> <!-- White color option -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details Section -->
+                <div class="product-details">
+                    <h2>SweatPants</h2> <!-- Product name -->
+                    <p class="price">$90</p> <!-- Product price -->
+                    <p class="description">Cozy and warm pants for cold winters.</p> <!-- Product description -->
+
+                    <!-- Color Options -->
+                    <div class="color-options">
+                        <p>Color:</p>
+                        <div class="color-image-container">
+                            <!-- Beige color option -->
+                            <input type="radio" id="color-beige" name="color" value="beige" checked>
+                            <label for="color-beige"><img src="../img/Women/Sweatpants/1.jpg" alt="Beige" class="color-image"></label>
+
+                            <!-- Black color option -->
+                            <input type="radio" id="color-black" name="color" value="black">
+                            <label for="color-black"><img src="../img/Women/Sweatpants/2.jpg" alt="Black" class="color-image"></label>
+
+                            <!-- White color option -->
+                            <input type="radio" id="color-white" name="color" value="white">
+                            <label for="color-white"><img src="../img/Women/Sweatpants/3.jpg" alt="White" class="color-image"></label>
+                        </div>
+                    </div>
+
+                    <!-- Size Options -->
+                    <div class="size-options">
+                        <p>Size:</p>
+                        <div class="size-button-container">
+                            <!-- Sizes available -->
+                            <input type="radio" id="size-s" name="size" value="S">
+                            <label for="size-s" class="size-button">S</label>
+
+                            <input type="radio" id="size-m" name="size" value="M">
+                            <label for="size-m" class="size-button">M</label>
+
+                            <input type="radio" id="size-l" name="size" value="L">
+                            <label for="size-l" class="size-button">L</label>
+
+                            <input type="radio" id="size-xl" name="size" value="XL">
+                            <label for="size-xl" class="size-button">XL</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Add to Cart Button -->
+                    <button class="buy-button">Add to Cart</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer">
+                <!-- Social Media Links -->
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                
+                <!-- Footer Navigation Links -->
+                <div class="row">
+                    <ul>
+                        <li><a href="../index/contactus.html">Contact us</a></li>
+                        <li><a href="../index/aboutus.html">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Copyright Info -->
+                <div class="row">
+                    ChicFix™ Copyright © 2024 chicfix - All rights reserved || ® Designed By: Dev Prajapti and Neel Hingrajiya
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
